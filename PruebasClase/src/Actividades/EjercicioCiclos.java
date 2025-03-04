@@ -9,7 +9,7 @@ public class EjercicioCiclos {
         * - Deben ser finitos, garantizar que finalice. Para garantizarlo, existe la condicion de parada, un ciclo se repite, cuando la condicion da true y finaliza cuando sea false
         * */
 
-        int opcionUsuario = 0, opcionMenuTipico = 0, opcionMenuCarta = 0, opcionMenuInter = 0;
+        int opcionUsuario, opcionMenuTipico, opcionMenuCarta, opcionMenuInter;
         int cantPlatos = 0, cantPlatoTipico = 0, cantPlatoCarta = 0, cantPlatoInter = 0 ;
         double cuenta = 0;
 
@@ -37,10 +37,12 @@ public class EjercicioCiclos {
                         switch (opcionMenuTipico){
                             case 1:
                                 JOptionPane.showMessageDialog(null, "Has seleccionado un plato de frijoles. El costo es de: $" + 12000);
+                                cuenta+=12000;
                                 cantPlatoTipico+=1;
                                 break;
                             case 2:
                                 JOptionPane.showMessageDialog(null, "Has seleccionado un plato de sopa de verduras. El costo es de: $" + 8000);
+                                cuenta+=8000;
                                 cantPlatoTipico+=1;
                                 break;
                             case 3:
@@ -68,10 +70,12 @@ public class EjercicioCiclos {
                         switch (opcionMenuCarta){
                             case 1:
                                 JOptionPane.showMessageDialog(null, "Has seleccionado un Churrasco. El costo es de: $" + 32000);
+                                cuenta+=32000;
                                 cantPlatoCarta+=1;
                                 break;
                             case 2:
                                 JOptionPane.showMessageDialog(null, "Has seleccionado un Baby Beef. El costo es de: $" + 40000);
+                                cuenta+=40000;
                                 cantPlatoCarta+=1;
                                 break;
                             case 3:
@@ -98,10 +102,12 @@ public class EjercicioCiclos {
                         switch (opcionMenuInter){
                             case 1:
                                 JOptionPane.showMessageDialog(null, "Has seleccionado un Pulpo en salsa. El costo es de: $" + 50000);
+                                cuenta+=50000;
                                 cantPlatoInter+=1;
                                 break;
                             case 2:
                                 JOptionPane.showMessageDialog(null, "Has seleccionado un Arroz con pollo. El costo es de: $" + 40000);
+                                cuenta+=40000;
                                 cantPlatoInter+=1;
                                 break;
                             case 3:
@@ -134,7 +140,9 @@ public class EjercicioCiclos {
         msj+= "Cantidad platos a la carta: " + cantPlatoCarta + "\n";
         msj+= "Cantidad platos internacionales: " + cantPlatoInter + "\n";
         msj+= "Cantidad platos procesados: " + cantPlatos + "\n";
+        msj+= "Total de la cuenta: $" + cuenta + "\n";
 
         JOptionPane.showMessageDialog(null, msj);
+        JOptionPane.showMessageDialog(null, "VUELVA PRONTO!!");
     }
 }
