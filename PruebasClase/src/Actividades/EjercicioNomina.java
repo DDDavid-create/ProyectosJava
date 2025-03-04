@@ -1,11 +1,11 @@
-package src.Actividades;
+package Actividades;
 
 import javax.swing.*;
 
 public class EjercicioNomina {
     public static void main(String[] arg){
 
-        double salario, total = 0;
+        double salario, total = 0, desc = 0;
         double porc1 = 0.02, porc2 = 0.04, porc3 = 0.08, porc4 = 0.1;
         int estrato, opcion;
         do{
@@ -15,15 +15,23 @@ public class EjercicioNomina {
 
             if (estrato > 0) {
                 if (estrato == 1 || estrato == 2) {
-                    total = salario - (salario * porc1);
+                    desc += salario * porc1;
+                    total += salario - desc;
                 } else if (estrato == 3 || estrato == 4) {
-                    total = salario - (salario * porc2);
+                    desc += salario * porc2;
+                    total += salario - desc;
                 } else if (estrato == 5) {
-                    total = salario - (salario * porc3);
-                } else if (estrato == 6) {
-                    total = salario - (salario * porc4);
+                    desc += salario * porc3;
+                    total += salario - desc;
+                } else if (estrato == 6){
+                    desc += salario * porc4;
+                    total += salario - desc;
                 }
-                JOptionPane.showMessageDialog(null, "Su salario con el descuento segun tu estrato es de: " + total);
+                String msj = "Salario: "+salario+"\n";
+                msj += "Estrato: "+estrato+"\n";
+                msj += "Descuento: "+desc+"\n";
+                msj += "Salario con descuento incluido "+total+"\n";
+                JOptionPane.showMessageDialog(null, msj);
             }else{
                 JOptionPane.showMessageDialog(null,"No es valido");
             }
