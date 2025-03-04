@@ -1,4 +1,4 @@
-package Ciclos;
+package Actividades;
 
 import javax.swing.*;
 
