@@ -1,4 +1,4 @@
-package Metodos;
+package Metodos.Prueba;
 
 import javax.swing.*;
 
