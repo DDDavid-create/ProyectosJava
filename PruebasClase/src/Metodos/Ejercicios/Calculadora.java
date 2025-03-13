@@ -40,28 +40,25 @@ public class Calculadora {
         n2 = validarNegativos("Ingrese el segundo numero");
     }
 
-    public double sumarNum(){
+    public void sumarNum(){
         solicitarDatos();
         double res = n1 + n2;
         mostrarMsj(res);
-        return res;
     }
 
-    public double restarNum(){
+    public void restarNum(){
         solicitarDatos();
         double res = n1 - n2;
         mostrarMsj(res);
-        return res;
     }
 
-    public double multiplicarNum(){
+    public void multiplicarNum(){
         solicitarDatos();
         double res = n1 * n2;
         mostrarMsj(res);
-        return res;
     }
 
-    public double dividirNum(){
+    public void dividirNum(){
         double res;
 
         do {
@@ -72,14 +69,12 @@ public class Calculadora {
         }while (n1 == 0 || n2 == 0);
         res = n1/n2;
         mostrarMsj(res);
-        return res;
     }
 
-    public double moduloNum(){
+    public void moduloNum(){
         solicitarDatos();
         double res = n1%n2;
         mostrarMsj(res);
-        return res;
     }
 
     public void mostrarMsj(double num){
